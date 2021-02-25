@@ -2,7 +2,7 @@ from Street import Street
 from Car import Car
 
 def input(inFiles):
-    for j in range(6):
+    for j in range(len(inFiles)):
 
         filename = inFiles[j]
         infile = open(filename, 'r')
@@ -16,16 +16,16 @@ def input(inFiles):
 
     streetList = []
     for _ in range(nStreets):
-        streetParams = [int(m) for m in infile.readline().split()]
-        streetList.append( Street(streetParams[0],streetParams[1],streetParams[2],streetParams[3]) ) 
+        streetParams = [m for m in infile.readline().split()]
+        streetList.append( Street(int(streetParams[0]),int(streetParams[1]),streetParams[2],int(streetParams[3])) ) 
 
     carList = []
     for _ in range(nCars):     
-        carParams = [int(m) for m in infile.readline().split()]
+        carParams = [m for m in infile.readline().split()]
         streetNames = []
-        for j in range(carParams[0]):
+        for j in range(int(carParams[0])):
             streetNames.append(carParams[j+1])
 
-        carList.append( Car(carParams[0], streetNames) )
+        carList.append( Car(int(carParams[0]), streetNames) )
 
     return(simDuration, nIntersections, nStreets, nCars, points, streetList, carList)
