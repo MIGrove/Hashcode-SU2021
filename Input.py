@@ -28,4 +28,4 @@ def input(inFiles):
 
         carList.append( Car(int(carParams[0]), streetNames) )
 
-    return(simDuration, nIntersections, nStreets, nCars, points, streetList, carList)
+    return(simDuration, nIntersections, points, streetList, carList)
