@@ -12,3 +12,7 @@ print(nCars)
 print(points)
 print(streetList)
 print(carList)
+
+def loop():
+    for current_second in range(simDuration):
+        
