@@ -5,3 +5,4 @@ class Street:
         self.street_name = street_name
         self.time_to_drive = time_to_drive
         self.current_cars = []
+        self.cars_crossed = 0
