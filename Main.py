@@ -8,22 +8,15 @@ outFiles = ["a_out.txt", "b_out.txt","c_out.txt","d_out.txt","e_out.txt","f_out.
 
 simDuration, nIntersections, points, streetList, carList = input(["a.txt"])
 
-intersections = []
-for j in range(len(streetList)):
-    schedule = {streetList[j].street_name : 1 }
-    intersections.append( Intersection(streetList[j].end_intersection, schedule) )
-
-<<<<<<< Updated upstream
-output("a_out.txt", intersections)
-
-#def loop():
-#    for current_second in range(simDuration):
-=======
 for car in carList:
     for street in car.streets_list:
         for street_alt in streetList:
-            if street_alt.street_name == street.street_name:
+            if street_alt.street_name == street:
                 street_alt.cars_crossed += 1
 
-for intersection in
->>>>>>> Stashed changes
+intersections = []
+for j in range(nIntersections):
+    schedule = {streetList[j].street_name : streetList[j].cars_crossed }
+    intersections.append( Intersection(streetList[j].end_intersection, schedule) )
+
+output("a_out.txt", intersections)
