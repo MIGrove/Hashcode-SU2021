@@ -13,6 +13,7 @@ print(points)
 print(streetList)
 print(carList)
 
+sample_stefan_dictionary = {0 : {"street1" : 1, "street2": 1}, 1 : {"street"}}
+
 def loop():
     for current_second in range(simDuration):
-        
