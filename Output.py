@@ -1,4 +1,4 @@
-def input(filename, intersections):
+def output(filename, intersections):
     f = open(filename, "w")
     f.write(len(intersections))
     for inter in intersections.keys():

@@ -4,3 +4,4 @@ class Street:
         self.end_intersection = end_intersection
         self.street_name = street_name
         self.time_to_drive = time_to_drive
+        self.current_cars = []
