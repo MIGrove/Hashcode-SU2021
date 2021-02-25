@@ -1,8 +1,8 @@
 def output(filename, intersections):
     f = open(filename, "w")
-    f.write(len(intersections))
+    f.write(len(intersections)+"\n")
     for inter in intersections:
-        f.write(inter.id)
-        f.write(inter.nIncomingStreets)
-        for i in inter.schedule.keys:
-            f.write(i + " " + inter.schedule[i])
+        f.write(str(inter.id)+"\n")
+        f.write(str(inter.nIncomingStreets)+"\n")
+        for i in inter.schedule.keys():
+            f.write(i + " " + str(inter.schedule[i])+"\n")
